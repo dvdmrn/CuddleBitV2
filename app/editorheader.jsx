@@ -137,15 +137,15 @@ var EditorHeader = React.createClass({
 		console.log('in _onLoadSetPoints~BUTTON~Click')
 		document.getElementById(this.props.uploadVoodleFileID).click();
 	},
-	handleChange: function(event) {
-	   console.log('Selected file:', event.target.files[0].name);
-	   name = event.target.files[0].name
-	   if(name != undefined){
-	   		console.log('we are emitting!!!!')
-	   		this.emit('load_setPoints', name);
+	// handleChange: function(event) {
+	//    console.log('Selected file:', event.target.files[0].name);
+	//    name = event.target.files[0].name
+	//    if(name != undefined){
+	//    		console.log('we are emitting!!!!')
+	//    		this.emit('load_setPoints', name);
 
-	   	}
-	 },
+	//    	}
+	//  },
 	/**
 	* Rendering
 	*
@@ -272,7 +272,6 @@ var EditorHeader = React.createClass({
 
 		return (
 			
-			<div>
 
 			
 
@@ -292,14 +291,6 @@ var EditorHeader = React.createClass({
 				{loadVoodleButton}
 				
 			</div>
-				<form>
-        			<FileInput name="voodleInput"
-                  		 accept=".csv"
-                  		 placeholder="Voodle file"
-                  		 className="inputClass"
-                  		 onChange={this.handleChange} />
-      			</form>
-		</div>
 			
 			);
 	}
