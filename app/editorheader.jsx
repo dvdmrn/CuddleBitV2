@@ -292,13 +292,7 @@ var EditorHeader = React.createClass({
 				{loadVoodleButton}
 				
 			</div>
-				<form>
-        			<FileInput name="voodleInput"
-                  		 accept=".csv"
-                  		 placeholder="Voodle file"
-                  		 className="inputClass"
-                  		 onChange={this.handleChange} />
-      			</form>
+				
 		</div>
 			
 			);
