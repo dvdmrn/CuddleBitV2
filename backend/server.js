@@ -102,7 +102,7 @@ function doSetTimeout(i) {
         myMotor.start(rendered_path_example[i]);
         //log('Setting speed to ' + rendered_path_example[i]);
         //log('Rotating servo to ' + rendered_path_main[i]);
-    },i);
+    },i*5);
     return t;
 }
 
@@ -229,7 +229,12 @@ function main() {
 
     app.use("/thirdparty", express.static(__dirname + '/thirdparty'));
     app.use("/recordings", express.static(__dirname+'/recordings'));
+    app.use("/css", express.static(__dirname+'/css'));
+    app.use("/js", express.static(__dirname+'/js'));
 
+    app.get('/', function (req, res) {
+      res.sendfile(__dirname + '/macaron-index.html');
+    });
 
     var host = server.address().address;
     var port = server.address().port;
