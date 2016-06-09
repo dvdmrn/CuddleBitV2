@@ -300,7 +300,7 @@ var VTEditor = React.createClass({
 
 
 		var designStyle = {
-			width:"44%",
+			width:"100%",
 			marginLeft:'auto',
 			marginRight:'auto',
 			display:"block",

@@ -102,7 +102,7 @@ function doSetTimeout(i) {
         myMotor.start(rendered_path_example[i]);
         //log('Setting speed to ' + rendered_path_example[i]);
         //log('Rotating servo to ' + rendered_path_main[i]);
-    },i);
+    },i*4);
     return t;
 }
 
